@@ -10,8 +10,8 @@ ENV TARGETARCH=$TARGETARCH
 
 # Set up certificates, base tools, and software.
 RUN apt-get update && \
-    apt-get install -y ca-certificates curl tcpdump gnupg libcap openssl su-exec bind-tools iputils iptables gcompat libc6-compat libstdc++
-    
+    apt-get install -y curl tcpdump gnupg openssl dnsutils iptables libstdc++
+
 COPY . /bin/
 
 # Expose the port on which the HTTP server will listen
