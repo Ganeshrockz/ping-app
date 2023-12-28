@@ -17,5 +17,7 @@ COPY . /bin/
 # Expose the port on which the HTTP server will listen
 EXPOSE 9090
 
+RUN chmod +x /bin/$TARGETOS/$TARGETARCH/ping-app
+
 # Command to run the Go application
 ENTRYPOINT ["/bin/sh", "-c", "/bin/$TARGETOS/$TARGETARCH/ping-app"]
