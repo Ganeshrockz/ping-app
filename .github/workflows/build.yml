@@ -22,7 +22,7 @@ jobs:
     - name: Build
       run: |
         CGO_ENABLED=0 GOOS=linux GOARCH=amd64 go build -o bin/linux/amd64/ping-app
-        CGO_ENABLED=0 GOOS=linux GOARCH=arm64 go build -o bin/linux/amd64/ping-app
+        CGO_ENABLED=0 GOOS=linux GOARCH=arm64 go build -o bin/linux/arm64/ping-app
 
     - uses: actions/upload-artifact@v2
       with:
