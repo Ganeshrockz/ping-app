@@ -9,7 +9,7 @@ ENV TARGETOS=$TARGETOS
 ENV TARGETARCH=$TARGETARCH
 
 # Set up certificates, base tools, and software.
-RUN apt-get install --no-cache ca-certificates curl tcpdump gnupg libcap openssl su-exec bind-tools iputils iptables gcompat libc6-compat libstdc++
+RUN apt-get install ca-certificates curl tcpdump gnupg libcap openssl su-exec bind-tools iputils iptables gcompat libc6-compat libstdc++
 
 COPY . /bin/
 
