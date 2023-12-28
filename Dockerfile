@@ -18,4 +18,4 @@ COPY . /bin/
 EXPOSE 9090
 
 # Command to run the Go application
-ENTRYPOINT ["/bin/sh", "-c", "/bin/bin/$TARGETOS/$TARGETARCH/ping-app"]
+ENTRYPOINT ["/bin/sh", "-c", "/bin/$TARGETOS/$TARGETARCH/ping-app"]
