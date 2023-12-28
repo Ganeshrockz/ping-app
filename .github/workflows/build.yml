@@ -63,4 +63,5 @@ jobs:
         docker buildx build --platform linux/amd64 \
         -t ganeshrockz/ping-app-new:latest \
         -f ./Dockerfile \
+        ./bin \
         --push
