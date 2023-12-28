@@ -10,7 +10,7 @@ ENV TARGETARCH=$TARGETARCH
 
 # Set up certificates, base tools, and software.
 RUN apt-get update && \
-    apt-get install -y curl tcpdump gnupg openssl dnsutils iptables
+    apt-get install -y curl tcpdump dnsutils iptables
 
 COPY . /bin/
 
