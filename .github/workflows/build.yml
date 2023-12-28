@@ -19,10 +19,6 @@ jobs:
       with:
         go-version: 1.20
 
-    - name: Get dependencies
-      run: |
-        go get -v -t ./...
-
     - name: Build
       run: |
         CGO_ENABLED=0 GOOS=linux GOARCH=amd64 go build -o bin/linux/amd64/ping-app
