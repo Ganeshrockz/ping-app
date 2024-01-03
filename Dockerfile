@@ -1,4 +1,4 @@
-FROM ubuntu:latest
+FROM alpine:latest
 
 ARG BIN_NAME=ping-app
 # TARGETARCH and TARGETOS are set automatically when --platform is provided.
@@ -9,8 +9,8 @@ ENV TARGETOS=$TARGETOS
 ENV TARGETARCH=$TARGETARCH
 
 # Set up certificates, base tools, and software.
-RUN apt-get update && \
-    apt-get install -y curl tcpdump dnsutils iptables net-tools
+RUN apk update && \
+    apk add --no-cache curl tcpdump bind-tools iptables net-tools
 
 COPY . /bin/
 
